@@ -150,7 +150,12 @@ video {
     color: #000;
 }
 
-.video-card video {
+.video-card .imgContainer img {
+    object-fit: contain;
+    height: 100%;
+}
+
+.video-card .imgContainer {
     margin: 0px;
     width: 50px;
     height: 25px;
@@ -275,7 +280,12 @@ header>ul {
         height: 400px;
     }
 
-    .video-card video {
+    .video-card .imgContainer img {
+        object-fit: contain;
+        height: 100%;
+    }
+
+    .video-card .imgContainer {
         width: 100px;
         height: 50px;
     }

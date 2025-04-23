@@ -2,21 +2,69 @@
 const videoButtonsElement = document.querySelector('.video-buttons');
 const videosCount = document.querySelector('.videos-count');
 const videoSrcList = [
-  { url: 'assets/video1.mp4', name: 'Good day 1' },
-  { url: 'assets/video2.mp4', name: 'Good day 2' },
-  { url: 'assets/video3.mp4', name: 'Good day 3' },
+  {
+    url: 'assets/video1.mp4',
+    name: 'Good day 1',
+    thumbnail: 'assets/video1-thumb.png',
+  },
+  {
+    url: 'assets/video2.mp4',
+    name: 'Good day 2',
+    thumbnail: 'assets/video2-thumb.png',
+  },
+  {
+    url: 'assets/video3.mp4',
+    name: 'Good day 3',
+    thumbnail: 'assets/video3-thumb.png',
+  },
 
-  { url: 'assets/video1.mp4', name: 'Good day 1' },
-  { url: 'assets/video2.mp4', name: 'Good day 2' },
-  { url: 'assets/video3.mp4', name: 'Good day 3' },
+  {
+    url: 'assets/video1.mp4',
+    name: 'Good day 1',
+    thumbnail: 'assets/video1-thumb.png',
+  },
+  {
+    url: 'assets/video2.mp4',
+    name: 'Good day 2',
+    thumbnail: 'assets/video2-thumb.png',
+  },
+  {
+    url: 'assets/video3.mp4',
+    name: 'Good day 3',
+    thumbnail: 'assets/video3-thumb.png',
+  },
 
-  { url: 'assets/video1.mp4', name: 'Good day 1' },
-  { url: 'assets/video2.mp4', name: 'Good day 2' },
-  { url: 'assets/video3.mp4', name: 'Good day 3' },
+  {
+    url: 'assets/video1.mp4',
+    name: 'Good day 1',
+    thumbnail: 'assets/video1-thumb.png',
+  },
+  {
+    url: 'assets/video2.mp4',
+    name: 'Good day 2',
+    thumbnail: 'assets/video2-thumb.png',
+  },
+  {
+    url: 'assets/video3.mp4',
+    name: 'Good day 3',
+    thumbnail: 'assets/video3-thumb.png',
+  },
 
-  { url: 'assets/video1.mp4', name: 'Good day 1' },
-  { url: 'assets/video2.mp4', name: 'Good day 2' },
-  { url: 'assets/video3.mp4', name: 'Good day 3' },
+  {
+    url: 'assets/video1.mp4',
+    name: 'Good day 1',
+    thumbnail: 'assets/video1-thumb.png',
+  },
+  {
+    url: 'assets/video2.mp4',
+    name: 'Good day 2',
+    thumbnail: 'assets/video1-thumb.png',
+  },
+  {
+    url: 'assets/video3.mp4',
+    name: 'Good day 3',
+    thumbnail: 'assets/video1-thumb.png',
+  },
 ];
 
 videosCount.innerHTML = videoSrcList.length;
@@ -54,7 +102,9 @@ videoSrcList.forEach((videoObj, idx) => {
   button.id = `video-${idx}`;
   button.innerHTML = `
     <div class="left-side">
-      <video src="${videoObj.url}" muted></video>
+      <div class="imgContainer">
+      <img src="${videoObj.thumbnail}" alt="${videoObj.name}" />
+      </div>
       <span>${videoObj.name}</span>
     </div>
     <small class="duration">Loading...</small>
@@ -62,7 +112,7 @@ videoSrcList.forEach((videoObj, idx) => {
   button.onclick = () => playVideoByIndex(idx);
   videoButtonsElement.appendChild(button);
 
-  // Load metadata separately
+  // Load metadata to get duration
   const tempVideo = document.createElement('video');
   tempVideo.src = videoObj.url;
   tempVideo.preload = 'metadata';
@@ -70,7 +120,6 @@ videoSrcList.forEach((videoObj, idx) => {
     const duration = formatTime(tempVideo.duration);
     button.querySelector('.duration').textContent = duration;
 
-    // Autoplay the first video only once
     if (idx === 0) {
       playVideoByIndex(0);
     }
