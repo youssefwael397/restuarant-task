@@ -58,12 +58,12 @@ const videoSrcList = [
   {
     url: 'assets/video2.mp4',
     name: 'Good day 2',
-    thumbnail: 'assets/video1-thumb.png',
+    thumbnail: 'assets/video2-thumb.png',
   },
   {
     url: 'assets/video3.mp4',
     name: 'Good day 3',
-    thumbnail: 'assets/video1-thumb.png',
+    thumbnail: 'assets/video3-thumb.png',
   },
 ];
 
@@ -115,7 +115,7 @@ videoSrcList.forEach((videoObj, idx) => {
   // Load metadata to get duration
   const tempVideo = document.createElement('video');
   tempVideo.src = videoObj.url;
-  tempVideo.preload = 'metadata';
+  // tempVideo.preload = 'metadata';
   tempVideo.addEventListener('loadedmetadata', () => {
     const duration = formatTime(tempVideo.duration);
     button.querySelector('.duration').textContent = duration;
