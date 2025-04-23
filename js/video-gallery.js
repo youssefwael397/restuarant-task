@@ -2,21 +2,21 @@
 const videoButtonsElement = document.querySelector('.video-buttons');
 const videosCount = document.querySelector('.videos-count');
 const videoSrcList = [
-  { url: '/assets/video1.mp4', name: 'Good day 1' },
-  { url: '/assets/video2.mp4', name: 'Good day 2' },
-  { url: '/assets/video3.mp4', name: 'Good day 3' },
+  { url: 'assets/video1.mp4', name: 'Good day 1' },
+  { url: 'assets/video2.mp4', name: 'Good day 2' },
+  { url: 'assets/video3.mp4', name: 'Good day 3' },
 
-  { url: '/assets/video1.mp4', name: 'Good day 1' },
-  { url: '/assets/video2.mp4', name: 'Good day 2' },
-  { url: '/assets/video3.mp4', name: 'Good day 3' },
+  { url: 'assets/video1.mp4', name: 'Good day 1' },
+  { url: 'assets/video2.mp4', name: 'Good day 2' },
+  { url: 'assets/video3.mp4', name: 'Good day 3' },
 
-  { url: '/assets/video1.mp4', name: 'Good day 1' },
-  { url: '/assets/video2.mp4', name: 'Good day 2' },
-  { url: '/assets/video3.mp4', name: 'Good day 3' },
+  { url: 'assets/video1.mp4', name: 'Good day 1' },
+  { url: 'assets/video2.mp4', name: 'Good day 2' },
+  { url: 'assets/video3.mp4', name: 'Good day 3' },
 
-  { url: '/assets/video1.mp4', name: 'Good day 1' },
-  { url: '/assets/video2.mp4', name: 'Good day 2' },
-  { url: '/assets/video3.mp4', name: 'Good day 3' },
+  { url: 'assets/video1.mp4', name: 'Good day 1' },
+  { url: 'assets/video2.mp4', name: 'Good day 2' },
+  { url: 'assets/video3.mp4', name: 'Good day 3' },
 ];
 
 videosCount.innerHTML = videoSrcList.length;
