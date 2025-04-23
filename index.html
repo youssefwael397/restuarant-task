@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hamza Resturant</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="/">
+        <img src="assets/logo.jpg" alt="Logo" class="logo" />
+      </a>
+      <ul>
+        <li>
+          <a href="#"><i class="fa-solid fa-house"></i> Home</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-solid fa-book-open"></i> Menu</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-solid fa-images"></i> Gallery</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-solid fa-star-half-stroke"></i> Rate Us</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-solid fa-address-book"></i> Contact</a>
+        </li>
+      </ul>
+      <div class="lang-switcher">
+        <button class="lang-toggle">
+          <i class="fa-solid fa-globe"></i>
+          <span class="lang-selected">English</span>
+          <i class="fa-solid fa-caret-down"></i>
+        </button>
+        <ul class="lang-options">
+          <li data-lang="en">English</li>
+          <li data-lang="ar">Arabic</li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section class="carousel">
+        <img class="first-slide" src="/assets/image1.jpg" alt="Slide 1" />
+        <img class="second-slide" src="/assets/image2.jpg" alt="Slide 1" />
+      </section>
+
+      <section class="videos">
+        <video src="" id="mainVideo" autoplay muted controls></video>
+        <div class="">
+          <div class="gallery-btn" onclick="toggleList()">
+            <h4>VIDEOS</h4>
+            <div>
+              <span class="videos-count"></span>
+              Videos
+              <i class="fa-solid fa-angle-down"></i>
+            </div>
+          </div>
+
+          <br />
+          <hr />
+
+          <div id="videoList">
+            <div class="video-buttons"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <ul>
+        <li>
+          <a href="#"><i class="fa-solid fa-house"></i> Home</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-solid fa-book-open"></i> Menu</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-solid fa-images"></i> Gallery</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-solid fa-star-half-stroke"></i> Rate Us</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-solid fa-address-book"></i> Contact</a>
+        </li>
+      </ul>
+    </footer>
+
+    <div class="lg-footer">
+      <p>© 2025 - Hamza Resturant</p>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/video-gallery.js"></script>
+  </body>
+</html>
