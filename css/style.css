@@ -21,16 +21,26 @@ a {
     color: inherit;
 }
 
+/* fonts */
+@font-face {
+    font-family: "Roboto";
+    src: url("../assets/fonts/Roboto-VariableFont_wdth\,wght.ttf");
+}
+
 /* Base styles */
 body {
     background: url("../assets/pattern-bg.webp") repeat;
-    font-family: Arial, sans-serif;
+    font-family: "Roboto", sans-serif;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
 }
 
 main {
-    padding: 0px 7px
+    padding: 0px 7px;
+    flex: 1;
+
 }
 
 header {
